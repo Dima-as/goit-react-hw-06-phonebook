@@ -4,9 +4,9 @@ export const getContacts = (state) => state.contacts.items;
 export const getVisibleContacts = (state) => {
   const contacts = getContacts(state);
   const filter = getFilter(state);
-  const normFilter = filter.toLocaleLowerCase();
+  const normFilter = filter.toLowerCase();
 
   return contacts.filter((cotact) =>
-    cotact.name.toLocaleLowerCase().includes(normFilter)
+    cotact.name.toLowerCase().includes(normFilter)
   );
 };

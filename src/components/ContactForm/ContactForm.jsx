@@ -24,7 +24,11 @@ export default function ContactForm() {
 
   const hendleSubmit = (e) => {
     e.preventDefault();
-    if (contacts.some((contact) => contact.name === name)) {
+    if (
+      contacts.some(
+        (contact) => contact.name.toLowerCase() === name.toLowerCase()
+      )
+    ) {
       alert(`${name} is already in contacts.`);
       return;
     }

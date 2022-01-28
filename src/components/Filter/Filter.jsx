@@ -9,7 +9,6 @@ export default function Filter() {
   const dispatch = useDispatch();
   const onFilterInputValue = (e) =>
     dispatch(actionContacts.filterContacts(e.target.value));
-  console.log(value);
   return (
     <label className={s.label}>
       Find contacts by name
